@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var x5 = function(n){
+	return n*2;
+}
+var result1 = x5(10);
+console.log("12 Line" + result1);
+
+var x5 = n => n*2; //{ }와 return 명시 생략함.
+//결과만 리턴
+var result2 = x5(10);
+console.log("result2 17 Line :",result2);
+
+var x4 = function(n){
+	console.log("함수 표현식x4 호출 20 Line",n);
+	return n*2;
+}
+
+var result = x4(10);
+console.log("result3 25 Line",result);
+
+		//n에 10을 넘겨주고있음
+var x4 = n => {console.log("arrow함수 x4호출 28 Line",n); return x*2};
+var result = x4(10);
+console.log(result);
+
+
+
+//매개변수 여러개일 경우 ()생략 불가
+var x3 = function (n, n2){
+	console.log("함수 표현식 x3 호출 36 Line", n, n2);
+}
+x3(10,20);
+
+//arrow 표현식, 매개변수가 여러개이면 괄호가 반드시 있어야함
+var x3 = (n, n2) => {console.log("arrow함수 x3표현식 41 Line",n,n2);}
+
+x3(10,20);
+
+//한개의 매개변수 ()	생략가능, 매개변수가 1개인 경우
+var x2 = function(n){
+	console.log("함수표현식 x2호출 47 Line",n);
+}
+x2(10);
+
+//arrow 표현식 //괄호 빼고 n만 적어도 됨
+var x2 = n => {console.log("arrow x2 표현식 52 Line", n)}
+x2(10);
+
+
+
+
+var x = function(){ //매개변수 없는 함수
+	console.log("함수 표현식 x호출 59 Line");
+}
+x();
+
+var x = ()=>{console.log("arrow함수 x호출 63 Line");}
+x();
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

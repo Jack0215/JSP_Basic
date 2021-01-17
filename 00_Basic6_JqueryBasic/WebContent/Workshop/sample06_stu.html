@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+//select에 change를 달아주고
+//select option부분에 value 적어줄것
+//val읽어와서 src부분에 뿌려지게 만들면 됨
+     $(document).ready(function() {
+        	$("select").on("change",function(){
+        		$("img").attr("src",$(this).val());
+        	});
+     	   
+     	});
+</script>
+</head>
+<body>
+이미지선택하기<br>
+<select>
+ <option value="a.jpg">a.jpg</option>
+ <option value="b.jpg">b.jpg</option>
+ <option value="c.jpg">c.jpg</option>
+</select>
+<img src="a.jpg" width="100" height="100" id="my">
+
+</body>
+</html>

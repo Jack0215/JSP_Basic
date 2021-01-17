@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(function(){
+		$("button").click(function () {
+			var text = $("#source").val();
+			$("#target").val(text); //source에서 얻어온 val값을 id가 target인곳에 text를 던진다.
+		});
+	});
+</script>
+
+</head>
+<body>
+	입력:<input type="text"	id="source"><br>
+	<button>복사</button><br>
+	출력:<input type="text"	id="target"><br>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*window.onload= function () {
+	document.querySelector("#vi").addEventListener("click", setView());
+	document.querySelector("#unvi").addEventListener("click", unsetView());
+}
+*/
+function setView() {
+	var image= document.querySelector("#images");
+	image.style.display="inline";
+}
+
+function unsetView() {
+	var image= document.querySelector("#images");
+	image.style.display="none";
+}
+function styleTest(){
+	var txt = document.querySelector("#test");
+	txt.style="coclo:red; font-size:40px";
+}
+</script>
+</head>
+<body>
+<input type="button" id="vi" value="보이기" onclick="setView()"><br>
+<input type="button" id="unvi" value="감추기" onclick="unsetView()"><br>
+<input type="button" id="test1" value="테스트" onclick="styleTest()"><br>
+<input type="text" id="test" value="style적용"/>
+
+<img id="images" src="../image/a.png">
+
+</body>
+</html>

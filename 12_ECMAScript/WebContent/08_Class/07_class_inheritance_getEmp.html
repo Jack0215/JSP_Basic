@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//상속==>
+class Employee{ //생성자 작성, name, salary
+	constructor(name, salary)
+	{
+		console.log("부모생성자")
+		this.name=name;
+		this.salary=salary;
+	}
+	getEmployee(){
+		return this.name+"\t"+this.salary;
+	}
+}
+class Manager extends Employee{
+	constructor(name, salary, depart)
+	{
+		super(name,salary);
+		console.log("자식 생성자 ==");
+		this.depart=depart;
+	} 
+	
+	//오버라이딩
+	//
+	getEmployee(){
+		return this.name+"\t"+this.salary+"\t"+this.depart;
+	}
+} //end Manager
+
+
+var man = new Manager("홍길동",1000,"인사"); 
+console.log(man.getEmployee()); //오버라이딩 메소드 호출
+</script>
+</head>
+<body>
+
+</body>
+</html>

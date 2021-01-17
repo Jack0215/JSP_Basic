@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//상속
+
+class Employee{ //부모클래스 name, salary
+	//constructor를 작성하지 않아도 인스턴스 생성
+	//default constructor
+	setName(name){
+		this.name = name;
+	}
+	setSalary(salary){
+		this.salary = salary;
+	}
+	getName(){
+		return this.name;
+	}
+	getSalary(){
+		return this.salary;
+	}
+}//end Employee
+
+ 	// 자식		확장		부모
+ 	//자식 클래스는 확장해서 부모 클래스값도 끌어쓴다.
+class Manager extends Employee{
+	//constructor를 작성하지 않아도 인스턴스 생성
+	//default constructor
+	setDepart(depart){ //자식만 가진 변수
+		this.depart = depart;
+	}
+	getDepart(){
+		return this.depart;
+	}
+}//부모 생성자 만들어 진 후 자식 생성자가 만들어진다.
+
+//사용하려면 객체 생성 후 사용
+var man = new Manager(); //자식 생성
+man.setName("홍길동"); //부모
+man.setSalary(1000); //부모
+man.setDepart("인사"); //자식
+
+console.log(man.getName());
+console.log(man.getSalary());
+console.log(man.getDepart());
+</script>
+</head>
+<body>
+
+</body>
+</html>

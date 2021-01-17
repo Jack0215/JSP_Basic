@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//Promise 객체 : 특정작업을 비동기처리 해 주는 객체
+//then 메소드의 체인 //의도와 다르게 reject 시 두번 째 then에서 success2 수행됨
+function xxx(){
+	return new Promise(function(resolve, reject){
+		console.log("1");
+			//resolve();
+			reject();  //1찍고 상태저장 2찍음 
+			//end 찍고 fail1 찍음
+		console.log("2"); 
+	}); 
+}
+xxx().then(function(){
+	console.log("success1");
+}, function () {
+	console.log("fail1");
+	reject(); //명시적 reject 호출 하여 fail2 함수 호출
+	//아래 function에서 fail2를 선택함
+	//reject에서 오류가 발생하면 강제로 fail2가 실행된다.
+}).then(function () {
+	console.log("success2");
+}, function(){
+	console.log("fail2");
+	});
+
+console.log("end");
+					 
+</script>
+</head>
+<body>
+
+</body>
+</html>

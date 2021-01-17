@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+   $(document).ready(function() {
+       $("#all").on("click",function(){
+    	   $("input[class=lang]").each(function () {
+			$(this).attr("checked",true);
+		});
+       });
+       
+       $("#not").on("click",function(){
+    	   $("input[class=lang]").each(function () {
+			$(this).attr("checked",false);
+		});
+       });
+   });
+</script>
+</head>
+<body>
+전체선택
+<input type="checkbox" name="all" id="all">
+전체선택해제
+<input type="checkbox" name="not" id="not"><br>
+<input type="checkbox" name="java" class="lang">java<br>
+<input type="checkbox" name="sql" class="lang">sql<br>
+<input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+</html>

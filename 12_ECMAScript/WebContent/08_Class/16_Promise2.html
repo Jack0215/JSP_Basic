@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//Promise 객체 : 특정작업을 비동기처리 해 주는 객체
+//비동기 처리되기 때문에 특정상태를 저장해야함
+//[PromiseStatus]속성에 pendig 상태 저장
+function xxx(){
+	return new Promise(function(resolve, reject){
+		console.log("1");
+	}); 
+}
+var result = xxx();
+console.log(result);
+console.log("end");
+					
+</script>
+</head>
+<body>
+
+</body>
+</html>

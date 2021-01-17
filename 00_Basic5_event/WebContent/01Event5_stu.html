@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//조건에 안맞을 경우 화면에 안맞는다고 error발생
+//문제가 있을 경우 submit 하면 안됨, return true냐 false냐로 판단
+function formSubmit(){
+	var result=true; //submit을 할 것인지에 대한 판단 변수
+	var str="";
+	var userid = document.getElementById("userid").value;
+	var passwd = document.getElementById("passwd").value;
+	var username = document.getElementById("username").value;
+	var email = document.getElementById("email").value;
+	var idSpan = document.getElementById(" idSpan");
+	var pwSpan = document.getElementById(" pwSpan");
+	var nameSpan = document.getElementById(" nameSpan");
+	var emailSpan = document.getElementById("emailSpan ");
+	console.log("!")
+	if(userid.length==0){
+		str="아이디 에러";
+		idSpan.innerHTML= str;  
+		psSpan.innerHTML="";
+		nameSpan.innerHTML="";  
+		emailSpan.innerHTML="";
+		result = false;					//passwd를 받아와서 int로 변경, 숫자가 아닐 경우를 판단, 문자있으면 안됨
+	} else if (passwd.length == 0 || Number.isNaN(parseInt(passwd))){
+		str="비번 에러";
+		idSpan.innerHTML="";
+		psSpan.innerHTML=str;
+		nameSpan.innerHTML="";
+		emailSpan.innerHTML="";
+		result = false;
+		
+	}else if (username.length >= 4 || username.length == 0){
+		str="이름 에러";
+		idSpan.innerHTML="";
+		psSpan.innerHTML= "";
+		nameSpan.innerHTML= str;
+		emailSpan.innerHTML="";
+		result = false;
+		
+	}else if (email.length == 0){
+		str="이메일 에러";
+		idSpan.innerHTML="";
+		psSpan.innerHTML= "";
+		nameSpan.innerHTML= "";
+		emailSpan.innerHTML= str;
+		result = false;
+		
+	}
+	return result;
+}
+</script>
+</head>
+<body>
+<form action="target.html" onsubmit="return formSubmit()">
+아이디<input type="text" name="userid" id="userid">
+<span id="idSpan"></span><br> <!-- id error -->
+비번<input type="text" name="passwd" id="passwd">
+<span id="pwSpan"></span><br> <!-- pw error -->
+이름<input type="text" name="username" id="username">
+<span id="nameSpan"></span><br> <!--  name error -->
+이메일<input type="text" name="email" id="email">
+<span id="emailSpan"></span><br> <!--  email error -->
+<input type="submit" value="로그인"> 
+<input type="reset" value="취소"><br>
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

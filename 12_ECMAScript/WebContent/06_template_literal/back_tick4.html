@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//$안에 홍길동을 넣어놨음
+
+//문자열과 표현식을 분리하여 파라미터로 전달
+function aaa2(txt, exp) {
+	console.log(txt, txt[0], exp, txt[1]);
+}
+let mesg="홍길동";
+aaa2 `world ${mesg}`;
+//`world`는 txt에 ${}는 exp에 들어감
+
+function aaa3(txt, exp) {
+	console.log(txt, txt[0], exp, txt[1]); //txt에 happy, !!!저장
+}
+aaa3 `happy ${mesg} !!!`; ///txt에 happy, !!!저장
+
+function aaa4(txt, exp, exp2) {
+	console.log(txt, txt[0], exp, txt[1], exp2);
+}
+aaa4 `안녕하세요 ${mesg} !!! 건강하세요 ${mesg}`;
+//문자열은 txt 배열로 받음
+//exp도 배열로 받는지 확인
+</script>
+</head>
+<body>
+
+</body>
+</html>

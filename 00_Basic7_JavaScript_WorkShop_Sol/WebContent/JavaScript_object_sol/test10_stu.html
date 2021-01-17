@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data = [];
+
+	function add() {
+		var username = document.getElementById("username").value;
+		var age = document.getElementById("age").value;
+		var address = document.getElementById("address").value;
+		//json객체 : {}구현, key/value 쌍으로, 문자열로 전송
+		var person = {
+			"username" : username,
+			"age" : age,
+			"address" : address
+		};
+		data.push(person);
+		document.getElementById("result").innerHTML = "<h3>저장완료</h3>";
+	}
+	function show(){
+		var mesg = "";
+		for(var i = 0; i< data.length; i++){
+			var person = data[i];
+			mesg += (i+1)+"번째 고객<br>";
+			mesg +="이름:"+person.username+"<br>";
+			mesg +="나이:"+person.age+"<br>";
+			mesg +="주소:"+person.address+"<br>";
+		}
+		document.getElementById("result").innerHTML=mesg;
+	}
+</script>
+</head>
+<body>
+	<h3>JSON 객체</h3>
+	이름
+	<input type="text" name="username" id="username">
+	<br> 나이
+	<input type="text" name="age" id="age">
+	<br> 주소
+	<input type="text" name="address" id="address">
+	<br>
+	<button onclick="add()">저장</button>
+	<br>
+	<button onclick="show()">출력</button>
+	<br>
+	<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 화면</title>
+<script type="text/javascript">
+function check(){
+	var id = document.querySelector("#userid").value;
+	var pw = document.querySelector("#passwd").value;
+	if(id.length==0 || pw.length==0){
+		alert("값을입력하세요.");
+		event.preventDefault();
+	}
+}
+</script>
+</head>
+<body>
+<form action="myLogin" method="post" onSubmit="check()">
+아이디:<input type="text" name="userid" id="userid"><br>
+비밀번호:<input type="text" name="passwd" id="passwd"><br>
+<input type="submit" value="로그인">
+</form>
+</body>
+</html>

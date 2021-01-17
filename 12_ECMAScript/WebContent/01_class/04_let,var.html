@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//var 변수는 전역 객체(window)에 추가된다.
+var mesg = "bb";
+console.log(this.mesg, window.mesg) //bb, bb
+
+//let 변수는 전역 객체(window)에 추가되지 않는다.
+let mesg2 = "aa";
+console.log(this.mesg2, window.mesg2); //undefined, undefined
+</script>
+</head>
+<body>
+
+</body>
+</html>

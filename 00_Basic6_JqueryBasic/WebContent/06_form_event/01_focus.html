@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#target").focus(function() {
+			$(this).css("background", "yellow");
+		});
+
+		$("#target").blur(function() {
+			$(this).css("background", "");
+		});
+
+		$("#other").on("click", function() {
+			$("#target").focus();
+		});
+		$("#other2").on("click", function() {
+			$("#target").blur();
+		});
+	})
+</script>
+</head>
+<body>
+	<form>
+		<input id="target" type="text"> <input type="text">
+	</form>
+	<button id="other">focus</button>
+	<button id="other2">blur</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//디스트럭처링(destructuring) ==>분해()
+let a,b;
+({a,b} = {a:100, b:200});
+console.log(a,b);
+
+let{a2,b2}={a2:100, b2:200};
+console.log(a2,b2);
+
+let{a3,b3} ={a3:'100',xxx:'200'};
+console.log(a3,b3); // 출력 : 100 undefined
+
+//default value
+let {a4, b4=999}={a4:'100',xxx:'200'};
+console.log(a4,b4); // 출력 : 100, 999
+</script>
+</head>
+<body>
+
+</body>
+</html>

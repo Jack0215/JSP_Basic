@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//iterable 객체가 아닌 json 객체는 for~ of 사용불가
+let b = {one:100, two:200};
+
+/* for(let x of b){ //of 사용 불가
+	console.loig("in",x);
+} */
+
+for (let x in b){
+	//console.log("in",x);
+	console.log("in",b[x]); //b의 배열 방의 key 값
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

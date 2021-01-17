@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+class Person{
+	constructor(name, age)
+	{
+		console.log("constructor");
+		this.name = name;
+		this.age = age;
+		//return {name:'aaa', age:100};//json obj반환
+		return 100; //리턴값 변환 
+					//100이 무시되고 밑에 객체 생성할때
+					//new 키워드로 넘겨준 값이 출력된다구 함
+	}
+	set setName(name){
+		this.name = name;
+	}
+	get getName(){
+		return this.name;
+	}
+	set setAge(age){
+		this.age = age;
+	}
+	get getAge(){
+		return this.age;
+	}
+}
+	//사용하려면 객체 생성
+	var p1 = new Person("홍길동",44);
+	/* p1.setName="홍길동";
+	p1.setAge=20; */ 
+	console.log(p1.name, p1.age); //반환 객체 값 사용
+	console.log(p1.getName()); //객체의 데이터 없음
+</script> 
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//배열의 util 클래스
+//fill() : Index 범위의 값을 지정한값으로 변경한다.
+//(a, b, c) = a: 채울 값, b: 시작idx, c:끝 idx(c-1)까지
+var arr1=[1,2,3,4,5];
+let copyArr1 = arr.fill(9);
+console.log("copyArr1:"+copyArr1);
+//2.
+var arr2=[1,2,3,4,5];
+let copyArr2 = arr2.fill(9,3);
+console.log("copyArr2:"+copyArr2); //1,2,3,9,9
+//3.
+var arr3=[1,2,3,4,5];
+let copyArr3 = arr3.fill(9,2,4);
+console.log("copyArr2:"+copyArr3); //1,2,9,9,5
+
+//3.
+var arr4=[10,20,30,40,50];
+let copyArr4 = arr4.fill(100,0,3);
+console.log("copyArr2:"+copyArr4); //100,100,100,40,50
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function aaa(n) {
+		var result="";
+		if(n%2==0){
+			result="짝수";
+		}else{
+			result="홀수";
+		}
+		return result;
+	}
+	var n = prompt("정수값을 입력하시오")
+	n = parseInt(n);
+	var result= aaa(n);	
+	console.log(result);
+	var result2= (function aaa(n) {
+		var result="";
+		if(n%2==0){
+			result="짝수";
+		}else{
+			result="홀수";
+		}
+		return result;
+	})(n);
+	document.write("<p>결과는 "+ result+ "</p>");
+	document.write("<p>결과는 "+ result2+ "</p>");
+</script>
+</head>
+<body>
+<p>hello</p>
+</body>
+</html>

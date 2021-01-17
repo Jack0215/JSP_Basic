@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#outer').mouseenter(function(){
+			$('#log').append('<div>mouseenter 이벤트 발생</div>');
+		})
+	});
+</script>
+</head>
+<body>
+	<div id="outer">
+	Outer
+	<div id=inner>Inner</div> <!-- Inner구역 마우스 올리면 이벤트 실해이 안됨 -->
+	</div>
+	<div id="other">MouseEnter 이벤트</div>
+	<div id="log"></div>
+	
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   
+   var arr = [];  
+   function save(){
+	   var v1 = document.getElementById("v1").value;
+	   arr.push(v1);
+	   
+	   list();
+   }
+   
+   function list(){
+	   var result = document.getElementById("result");
+	   var mesg = '';
+	   for(var i=0; i < arr.length; i++){
+		   mesg = mesg + arr[i]+"<br>";
+	   }
+	   result.innerHTML=mesg;
+   }
+
+   function enter(e){
+	   if(e.keyCode == 13){
+		   save();
+	   }
+   }
+   
+   
+</script>
+</head>
+<body>
+ 값:<input type="search" name="v1" id="v1" onkeyup="enter(event)">
+  <div id="result">
+ 
+ </div>
+
+</body>
+</html>

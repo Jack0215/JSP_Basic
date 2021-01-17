@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   // 구현
+  /*  function info(){
+   document.getElementById("str1").innerText=str1.length;
+	   var n = document.getElementById("str");
+	   document.getElementById("str2").innerText=n;
+	   document.getElementById("str3").innerText="str3".toUpperCase();
+	   var n = document.getElementById("str").value;
+	   var n1 = n.value;
+	   document.write(n1.length);
+	   document.write(n1.substring(0,5));
+	   document.write(n1.toUpperCase());
+	   document.write(n1.toLowerCase());
+   } */
+   function info(){
+	   var str = document.getElementById("str").value;
+	   var str1 = str.length;
+	   var str2="";
+	   for(var i=0; i<str1; i++){
+		   str2 += str[i]+",";
+	   }
+	   var str3=str.toUpperCase();
+	   var str4=str.toLowerCase();
+	   var str5="";
+	   for(var i=str1-1; i>=0; i--){
+		   str5 += str[i];
+	   }
+	   var str6 = str.charAt(0);
+	   var str7 = str.charAt(2);
+	   var str8 = str.charAt(0,5); //0부터 5개 리턴
+	   document.getElementById("str1").innerText = str1;
+	   document.getElementById("str2").innerText = str2;
+	   document.getElementById("str3").innerText = str3;
+	   document.getElementById("str4").innerText = str4;
+	   document.getElementById("str5").innerText = str5;
+	   document.getElementById("str6").innerText = str6;
+	   document.getElementById("str7").innerText = str7;
+	   document.getElementById("str8").innerText = str8;
+   }
+  
+</script>
+</head>
+<body>
+<h3>문자열 처리</h3>
+입력문자열<input type="text" name="str" id="str"><button onclick="info()">문자열 정보</button>
+<div>
+입력문자열 길이:<span id="str1"></span><br>
+입력문자:<span id="str2"></span><br>
+대문자로:<span id="str3"></span><br>
+소문자로:<span id="str4"></span><br>
+꺼꾸로 출력:<span id="str5"></span><br>
+첫글자만 출력:<span id="str6"></span><br>
+3번째 글자만 출력:<span id="str7"></span><br>
+1번째부터 5번째까지 글자만 출력:<span id="str8"></span><br>
+</div>
+</body>
+</html>

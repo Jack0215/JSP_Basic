@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*	var n = prompt("숫자를 입력하세요.");
+	n1 = parseInt(n);
+	
+	if(n1%2==0){
+		document.write("짝수입니다.")
+		
+	} else{
+		document.write("홀수입니다.")
+	} */
+	
+	
+	//함수에 넘겨서 함수에서 홀수인지 짝수인지 받아와서 출력
+	
+	function aaa(n){
+		var result="";
+		if(n1%2==0){
+			result="짝수";
+		} else{
+			result="홀수";
+		} 
+		return result;
+	}
+	
+	var n = prompt("숫자를 입력하세요.");
+	n1 = parseInt(n);
+	
+	var result = aaa(n);
+	console.log(result);
+	
+	
+	//자기함수 호출 사용
+/* 	var result2 = (funcation aaa(n){
+		var result ="";
+		if(n%2==0){
+			result="짝수";
+		}else{
+			result="홀수";
+		}
+		return result;
+	})(n);
+	
+	document.write("<p>결과는"+result+"</p>");
+	document.write("<p>결과는"+result2+"</p>"); */
+	
+	/* 
+	if (function one(n1) {
+		console.log("입력한 값은 짝수입니다.")
+		document.write("입력한 값은 짝수입니다.")
+		return "zero";
+	})(n1%2==0);
+	else (function one(n1) {
+		console.log("입력한 값은 홀수입니다.")
+		document.write("입력한 값은 홀수입니다.")
+		return "one";
+	})(n1%2==1); */
+	
+</script>
+</head>
+<body>
+	<p>hello</p>
+</body>
+</html>

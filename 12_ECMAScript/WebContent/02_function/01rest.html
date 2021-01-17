@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//rest 파라미터 : 가변인자를 총칭
+//spread 연산자 : '...변수명' 을 사용하는 코드 지칭
+function aaa(...n){ //...n은 spread연산자를 사용한 함수
+	console.log("10 Line",n); 
+	for(let a in n){
+		console.log("12 Line n:",a);
+	}
+	console.log("14 Line ===");  
+}    
+aaa(1);  
+
+function bbb(n,...xxx) {
+	console.log("18 Line",xxx);
+	for(let i in xxx){
+		console.log("20 Line",i);
+	}
+}  
+bbb(1); //n에 1이 들어가고 ...xxx에는 아무런 값이 없다.
+bbb(1,2,3); //n에 1이 들어가고 ...xxx에는 2,3이 들어간다.
+</script>
+</head>
+<body>
+
+</body>
+</html>

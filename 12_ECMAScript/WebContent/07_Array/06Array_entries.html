@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//배열의 util 클래스
+//배열을{key:value} 형태로반환. key는배열index값이고value는배열요소값.
+//for~of 반복문사용하여iterator로처리가능.
+var arr=["홍길동","이순신","유관순"];
+//entries() ==> {key:value} 형태로 자동으로 반환
+var x = arr.entries();
+console.log(x);
+
+for(var[key,v]of x){ //of : 실제 값, in: index값
+	console.log("16 Line",key, v); //idx, data
+}
+
+//keys()
+var x2= arr.keys(); 
+console.log(x2);
+for( var key of x2){
+	console.log("25 Line",key);
+} 
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

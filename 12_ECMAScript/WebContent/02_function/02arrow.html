@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* //1. 함수 표현식 
+var a = function () {
+	console.log("a");
+}
+a();
+//2. 람다 표현식
+var a2 = () => {
+	console.log("a2");
+}
+a2(); */
+
+//1. 함수 표현식 
+var a = function (x) {
+	console.log("a: "+x);
+}
+a(10);
+//2. 람다 표현식
+var a2 = (x) => {
+	console.log("a2: "+x);
+}
+a2(10);
+
+//3. 파라미터 1개 일 경우, () 생략 가능
+var a3 = x => {
+	console.log("a3: "+x)
+}
+a3(10);
+
+//4. 파라미터 여러개일경우 생략 불가
+var a4 = (x,y) =>{
+	console.log("a4: "+x+"\t"+y); 
+}
+a4(10,20);
+</script>
+</head>
+<body>
+
+</body>
+</html>

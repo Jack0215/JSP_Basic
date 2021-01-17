@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//1. 일반적은 함수 형태
+function a(x,y){
+	return x+y;
+}
+var result = a(10,20);
+console.log(result);
+
+//2.람다 함수와 디스트러쳐링 적용
+var result2=([x,y])=>x+y; //매개변수와 리턴값이 있는 람다함수
+var result3=(x,y)=>x+y; //매개변수와 리턴값 있음, 매개변수 여러개 ()사용..?
+console.log(result2([10,20]));
+console.log(result3(10,20));
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

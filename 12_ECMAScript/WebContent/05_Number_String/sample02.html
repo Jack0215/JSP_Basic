@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//includes()==>어떤 문자열의 포함여부 반환
+var mesg = "123hello홍길동987";
+console.log("1:", mesg.includes("123"));
+console.log("2:", mesg.includes("홍길동"));
+console.log("3:", mesg.includes("홍길도"));
+console.log("4:", mesg.includes("123","5")); //start index
+
+//startWith()==> 어떤문자열로 시작  여부 반환
+console.log("1:", mesg.startsWith("123"));
+console.log("1:", mesg.startsWith("hello"));
+console.log("1:", mesg.startsWith("hello",3));
+
+//endWidth()==>어떤 물자열로 끝나는지
+console.log("1:",mesg.endsWith("987"));
+console.log("2:",mesg.endsWith("hello"));
+console.log("3:",mesg.endsWith("hello",8)); //길이
+
+
+//repeat()==> 문자열 반복
+var mesg="hello";
+console.log("1:", mesg.repeat());
+console.log("2:", mesg.repeat(1));
+console.log("3:", mesg.repeat(2));
+console.log("4:", mesg.repeat(3));
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    /*
+    
+       함수 구현
+      
+    */
+   function arr(){
+
+    	var v1 = document.getElementById("v1").value;
+    	var data = v1.split(",");
+    	var sort = data.sort(function(a,b){return a-b;});
+    	var sum =0;
+		for(var i=0; i<sort.length; i++){
+    	  sum += parseInt(sort[i]);
+    	}
+		console.log(sum);
+		var avg=sum/sort.length;
+		var median =0;
+		if(data.length%2==0){
+			var n = sort.length;
+			var f = parseInt(sort[n/2-1]);
+			var l = parseInt(sort[n/2]);
+			var i  = (f+l)/2;
+			median = i;
+		} else {
+			var i = ((sort.length+1)/2);
+			conole.log(i);
+			median=parseInt(sort[i-1]);
+		}
+		var mesg = "합계:"+sum+"<br>";
+			mesg += "평균:"+avg.toFixed(2)+"<br>";
+			mesg += "중앙값:"+median+"<br>";
+			console.log(sort);
+			document.getElementById("result").innerHTML=mesg;
+    }
+  
+</script>
+</head>
+<body>
+<h3>배열 관리</h3>
+값:<input type="text" name="v1" id="v1" value="1,5,10,9,3,7,23,4,6,8">
+<button onclick="arr()">데이터 분석</button><br>
+<div id="result"></div>
+</body>
+</html>

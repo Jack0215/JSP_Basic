@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#run").click(function() {
+			$(":animated").toggleClass("toggleWidth");
+		});
+
+		function animateIt(i) {
+			$("#ani").slideToggle("slow", animateIt);
+		}
+		animateIt();
+	})
+</script>
+<style type="text/css">
+div {
+	background: red;
+	border: 1px solid blue;
+	width: 70px;
+	height: 70px;
+	margin: 0 3px;
+	float: left; 
+}
+
+.toggleWidth {
+	width: 40px;
+}
+</style>
+</head>
+<body>
+<button id="run">Run</button>
+<div></div>
+<div id="ani"></div>
+<div></div>
+</body>
+</html>

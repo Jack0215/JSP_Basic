@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자식 선택자 실습</title>
+<style type="text/css">
+  #one >  h1 {   /* id one을 기준으로  > 사용 자식중 h1을 선택함 */
+	color: red;
+  }
+ 
+  #one > div > h1 {   /* id one을 기준으로  > 사용 자식중 h1을 선택함 */
+	color: red;
+  }
+</style>
+</head>
+<body>
+	<div id="one">
+		<h1>Hello</h1>
+		<p>Hello2</p>
+	  <div>
+	     <h1>world</h1>
+	  </div>
+	</div>
+</body>
+</html>
+

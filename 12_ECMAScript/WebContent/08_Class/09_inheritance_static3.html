@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//클래스 안에서 제너레이터 객체 만들어서 사용가능
+class Employee{
+	*info(){
+	yield "hello";
+}
+}
+let emp =  new Employee();
+let gen = emp.info();
+//console.log(gen.next());
+console.log(gen.next().value);
+</script>
+</head>
+<body>
+
+</body>
+</html>

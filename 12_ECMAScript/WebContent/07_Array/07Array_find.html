@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//ele 배열값 하나하나가 들어감
+//특정 배열값을 찾을 때 씀
+var arr = [10,20,30,40,50];
+let xxx = arr.find(function (ele, idx, all) {
+	console.log("ele:",ele,"ind:",idx,"all:",all);
+	return ele == 30;
+});
+console.log(xxx); 
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

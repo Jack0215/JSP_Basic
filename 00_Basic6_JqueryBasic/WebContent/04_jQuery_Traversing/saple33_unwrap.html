@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(function() {
+		$("button").on("click", function() {
+			if ($("p").parent().is("div")) {
+				($("p").unwrap());
+			} else {
+				$("p").wrap("<div></div>");
+			}
+		});
+	});
+</script>
+<style>
+div {
+	border: 3px solid blue;
+}
+</style>
+</head>
+<body>
+	<h2>영웅들</h2>
+	<button>wrap/unwrap</button>
+	<div class="container">
+		<p>이순신</p>
+		<p>강감찬</p>
+	</div>
+</body>
+</html>

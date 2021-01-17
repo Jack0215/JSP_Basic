@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(":button").css("border", "3px red solid");
+		$("#disable").click(function() {
+			$("input[type='text']:enabled").removeAttr("enabled");
+			$("input[type='text']:enabled").attr("disabled", "true");
+		});
+		$("#enable").click(function() {
+			$("input[type='text']:disabled").removeAttr("disabled");
+			$("input[type='text']:disabled").attr("enabled", "true");
+		});
+		$("form").submit(function(event) {
+			event.preventDefault();
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<input type="text" id="first"> <input type="text" id="second"
+				disabled="disabled"> <input type="button" value="enable"
+				id="enable">
+			<button id="disable">disable</button>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    /*
+      함수 구현
+    */
+  /* function info(){
+    	var str = document.getElementById("v1").value;
+    	var data = str.split(" ");
+    	var str1 = data.length;
+    	
+    	var n2 = 0;
+    	for(var i=0; i<str.length; i++){
+    		if(v1[i]==" ")continue;
+    		n2++;
+    	}
+    	var mesg = "단어수:"+n+"<br>";
+    	var mesg += "글자수:"+n2+"<br>";
+    	
+    	 document.getElementById("str1").innerText = str1;
+    } */
+    
+    function info(){
+    	var v1 = document.getElementById("v1").value;
+    	var data = v1.split(" ");
+    	var n = data.length;
+    	var n2 = 0;
+    	for(var i=0; i<v1.length; i++){
+    		if(v1[i]==" ")continue;
+    		n2++;
+    	}
+    	var mesg = "단어수:"+n+"<br>";
+    	 mesg += "글자수:"+n2+"<br>";
+    	
+    	 document.getElementById("result").innerHTML = mesg;
+    }
+</script>
+</head>
+<body>
+<h3>문자열 관리</h3>
+값:<input type="text" name="v1" id="v1" value="How are you? fine thank you">
+<button onclick="info()">데이터 분석</button><br>
+<div id="result"></div>
+</body>
+</html>

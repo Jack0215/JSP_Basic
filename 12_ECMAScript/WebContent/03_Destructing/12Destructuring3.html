@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//디스트럭처링(destructuring) ==>분해()
+function a({x,y}) {
+	console.log(x,y);
+}
+a({x:100,y:200});
+
+function a2([x,y]) {
+	console.log(x,y);
+}
+//String 출력방법
+a2(['A','B']);
+
+function a3([x,y,z='hello']) {
+	console.log(x,y,z);
+}
+a3(['A','B']);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

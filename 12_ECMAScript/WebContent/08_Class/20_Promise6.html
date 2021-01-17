@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//then 메소드의 체인
+function xxx(){
+	return new Promise(function (resolve, reject) {
+		console.log("1");
+		resolve();
+		//reject
+		console.log("2");
+	})
+}
+xxx().then(function () {
+	console.log("success1");
+	return "홍길동"; 
+}).then (function (p) { //p는 return 값이 된다.
+	console.log("success2"+p);
+	return "안녕하세요"+p;
+}).then (function (p2) {
+	console.log("success3"+p2); 
+	
+});
+console.log("end"); 
+					 
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* var a = function () {
+	console.log("a");
+}
+a();
+
+var a2 = ()=>{
+	console.log("a2");
+};
+a2(); */
+
+/* this.n=20;
+var a ={
+		n=10,
+		b:function(){
+			console.log(this.n);
+		}
+}
+a.b(); */ 
+
+function aaa(a=1, b='홍길동'){
+	console.log(a,b);
+}
+aaa();	//호이스팅 처리에 의해
+aaa(100); //a값만 변경되어 출력됨
+aaa(200,"유관순"); //a,b모두 변경되어 출력됨
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

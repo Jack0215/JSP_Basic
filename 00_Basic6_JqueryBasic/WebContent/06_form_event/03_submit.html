@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#target").submit(function(){
+			var mesg="실패";
+			if($(":text").val()=='OK'){ //:해주면 text만 찾아옴
+				mesg="성공";
+			}
+			$("div").text(mesg);
+			event.preventDefault();
+		})
+	})
+</script>
+</head>
+<body>
+	OK입력하면'성공'출력하고 아니면 '실패'출력
+	<form id="target">
+	<input type="text" value="">
+	<input type="submit" value="Go"> 
+	</form>
+	<div></div>
+	
+</body>
+</html>

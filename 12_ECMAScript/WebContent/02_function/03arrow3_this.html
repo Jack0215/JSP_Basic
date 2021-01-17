@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+this.n=20;//익명함수
+
+var a = {
+		n:10,
+		b:function(){
+			console.log(this.n);
+		}
+}
+a.b();
+
+//arrow 함수
+var a2 = {
+		n:10,
+		b:()=>{
+			console.log(this.n);
+			//n을 10으로 바꿔도 7라인값이 출력된다.
+		}
+}
+a2.b();
+</script>
+</head>
+<body>
+
+</body>
+</html>

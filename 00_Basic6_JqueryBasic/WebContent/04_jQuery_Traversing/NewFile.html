@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    
+  function xxx() {
+	var arr= document.getElementsByName("fruits");//주의 
+	
+	var str="";
+	for (var i = 0; i < arr.length; i++) {
+		var c= arr[i];
+		if(c.checked){
+			str+= c.value+ "<br>";
+		}
+	}
+	document.getElementById("result").innerHTML = "<h1>"+str+"</h1>";
+}
+
+ 
+</script>
+</head>
+<body>
+좋아하는 과일 선택하기<br>
+ &nbsp;사과<input type="checkbox"  name="fruits" value="사과"><br>
+ &nbsp;오렌지<input type="checkbox"  name="fruits" value="오렌지"><br>
+ &nbsp;바나나<input type="checkbox"  name="fruits" value="바나나"><br>
+<button onclick="xxx()"> 결과보기</button>
+<div id="result"></div>
+</body>
+</html>

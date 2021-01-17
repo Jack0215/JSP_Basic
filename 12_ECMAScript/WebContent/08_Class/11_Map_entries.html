@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//1. 객체생성
+var map = new Map();
+
+//2. 정보보기
+console.log(map);
+
+//3. 데이터 저장 .set()
+map.set("one", 100);
+map.set(1,200);
+map.set(false,300);
+
+//4.데이터 출력 .get()
+var data = map.entries();
+console.log(data.next());
+console.log(data.next());
+console.log(data.next());
+console.log("========");
+
+//5. 데이터 출력 .keys() 키를 반환하는 {value:키값, done:불린값}
+var data = map.keys();
+console.log(data.next()); //실제 키값만 가져오면 .value하면 됨
+console.log(data.next().value); 
+console.log(data.next());
+console.log("========");
+
+
+//6.데이터 출력 .values() 메소드 : 추가한 순서로 value를 가져옴
+console.log("======");
+console.log(data.next().value);
+console.log(data.next());
+console.log(data.next());
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성 선택자 실습</title>
+<style type="text/css">
+  div[class |='en']{
+  /*div안에 calss를 찾고있음  */
+    color:red;
+  }
+</style>
+</head>
+<body>
+    <div id="one">man-news</div>
+    <div class="en" >milk man</div>
+    <div class="kr en">letterman2</div>
+    <div class="en-uk">letterman2</div>
+     <div class="kr">newmilk</div>
+    <div id="two" class="en-UK">superman</div>
+    <!--하이픈으로 연결된 것도 단어로 인식  -->
+</body>
+</html>
+

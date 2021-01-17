@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function test(e) {
+	document.getElementById("result").innertText=e.keyCode;
+		
+	}
+</script>
+</head>
+<body>
+<input type="text" id="test" onkeyup="test(event)" />
+<span id="result"></span>
+</body>
+</html>

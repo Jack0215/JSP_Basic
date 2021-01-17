@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+class Employee{
+	//상속관계에선 반드시 부모 클래스를 호출해야함
+	//manager가 갖고있응 유일한 값은depart
+	//manager는 Employee를 상속, 생성자를 통해 depart, name, salary초기화,
+	//getEmployee() 오버라이딩 depart, name, salary 정보 리턴
+	
+	constructor(name, sal)
+	{
+		this.name=name;
+		this.salary=sal;
+	}
+	setName(name){
+		this.name=name;
+	}
+	setSalary(sal){
+	this.salary = sal;
+	}
+	getName(){
+		return this.name;
+	}
+	getSalary(){
+		return this.salary;
+	}
+	getEmployee(){
+	return this.name+"\t"+this.salary;
+	}
+}
+
+class Manager extends Employee{
+	//static 메소드
+	static getInfo(){
+		console.log(this);
+		return  "홍길동";
+	}
+	constructor(name, sal, depart)
+	{
+	super (name, sal); //부모의 name과 salary값
+	console.log("=====");
+	console.log(this);
+	
+	this.depart=depart;
+	}
+	setDepart(depart){
+		this.depart=depart;
+	}
+	getDepart(){
+		return this.depart;
+	}
+	getEmployee(){
+		return this.name+"\t"+this.salary+"\t"+this.depart;
+	}
+} //end Manger
+
+console.log(Manager.getInfo());
+
+var man = new Manager("홍길동",1000,"인사"); 
+console.log(man.getEmployee()); //오버라이딩 메소드 호출
+</script>
+</head>
+<body>
+
+</body>
+</html>

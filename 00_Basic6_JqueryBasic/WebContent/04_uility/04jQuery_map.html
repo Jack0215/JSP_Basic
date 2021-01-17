@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js">
+	
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+	
+	$(document).ready(function () {
+		var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July'
+			, 'August','September','October','November','December'];
+		var months2 = $.map(months, function (value, i) {
+			return value.substring(0,3);
+		});
+		console.log("months:"+months.join(","));
+		console.log("months2:"+months2.join(","));
+	});
+	
+	});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

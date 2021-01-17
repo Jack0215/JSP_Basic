@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//디스트럭쳐링 ()==>분해(배열,객체)
+var m = [10,20];
+var[x,y]=[10,20]; //10과 20을 각각 x,y로 저장한다.
+console.log(x,y); //var x  = m[0]
+
+var [k, k2, k3] = [10, 20];
+console.log(k, k2, k3); //10, 20, undefined
+
+var [k, k2, k3=100] = [10, 20]; //k3에 default값을 설정할 수 있다.
+console.log(k, k2, k3); //10, 20, undefined
+
+var k, k2, k3;
+[k, k2, k3] = [9,8,7];
+console.log(k, k2, k3); //9,8,7 //12,13라인과 같은 의미이다.
+
+var m = [10,9,[100,200]];
+var a, a2, a3, a4;
+[a, a2, [a3, a4]] = [10,9,[100,200]];
+console.log(a,a2,a3,a4);
+
+var x = 10;
+var x2 = 20;
+//swap
+[x, x2] = [x2, x];
+console.log(x, x2);
+
+//rest 연산자 ...n
+var [a,b,...c]=[9,8,7,6,5,4];
+console.log(a,b,c); //9,8,array
+
+//변수 생략
+var [,,n]=[9,8,7];
+console.log(a,b,c);
+
+//함수의 파라미터 destructing
+function aaa(n) {
+	console.log(k+k2);
+}
+aaa([10,20]);
+
+var sum = function ([k,k2]) {
+	return k+k2;
+}
+console.log(sum([10,20])); //sum의 index번호와 function의 index번호(갯수)가 일치해야된다.
+							//갯수가 초과되면 값이 넘어가지 않음
+
+//arrow함수로 변형
+//arrow 함수
+var sum = ([k, k2])=> k+k2;//매개변수, 리턴값 있음. {}생략 가능
+var result = sum([10,20]);
+console.log(result);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

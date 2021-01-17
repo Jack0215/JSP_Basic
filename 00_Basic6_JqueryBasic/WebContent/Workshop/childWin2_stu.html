@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+ $(document).ready(function() {
+	
+     $("#userid").val(opener.$("#userid").val());
+     $("#a").on("click",function(){
+    	 var data = $("#userid").val();
+    	 console.log(data);
+    	 opener.$("#userid").val(data);
+    	 window.close();
+    	 
+     });
+     
+});
+</script>
+</head>
+<body>
+ 아이디:<input type="text" name="userid" id="userid">
+ <button id="a">아이디 사용 가능</button>
+</body>
+</html>

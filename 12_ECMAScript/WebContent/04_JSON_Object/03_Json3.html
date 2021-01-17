@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var person={
+		name:"홍길동",
+		age:20,
+		//:function() 생략
+		getName(){
+			return this.name
+		},
+		setName(n){
+			this.name=n
+		},
+		getAge(){
+			return this.age
+		}, 
+		setAge(n){
+			this.age=n
+		}
+} //end of json
+
+console.log(person.name, person.age);
+person.setName("이순신");
+person.setAge(44);
+console.log(person.name, person.age);
+console.log(person.getName(), person.getAge());
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//copyWithin(a, [b,c]) index범위의 값을 복사 
+//a:복사된 값을 설정 idx
+//b:복사하기 위한 시작 idx
+//c:복사하기 위한 끝 idx(c-1);
+//요약 : a 위치부터 붙여넣기 시작해서 b(index값)값 부터 c-1 index까지 복사한다.  
+var arr=[1,2,3,4,5];
+let copyArr1 = arr.copyWithin(0);
+console.log(copyArr1); //1,2,3,4,5
+
+
+var arr=[1,2,3,4,5];
+let copyArr2 = arr.copyWithin(0,3); //매개변수 2개만 적음 0=a, 3=b
+console.log(copyArr2); //4,5,3,4,5	//idx:0,1,2,3,4 이고 3번방 값은 4이다.
+
+var arr=[1,2,3,4,5];
+let copyArr3 = arr.copyWithin(2); //idx 2번방부터 새로 시작한다.
+console.log(copyArr3); //1,2,1,2,3
+
+var arr=[1,2,3,4,5];
+let copyArr4 = arr.copyWithin(1,0,3);
+console.log(copyArr4); //1,1,2,3,5
+</script>
+</head>
+<body>
+
+</body>
+</html>

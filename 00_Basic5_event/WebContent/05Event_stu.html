@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		document.getElementById("allCheck").addEventListener("click", check,false);
+		document.querySelector("#test").addEventListener("click", view, false);
+	};
+	function check() {
+		var fruits = document.getElementsByName("fruits");
+		for (var i = 0; i < fruits.length; i++) {
+			fruits[i].checked = this.checked;
+		}
+	}
+	
+	function view() {
+		var fruits = document.querySelectorAll(".fruits");
+		console.log(fruits);
+		var result = "";
+		for (var i = 0; i < fruits.length; i++) {
+			var fu = "";
+			if (fruits[i].checked){
+				fu=fruits[i];
+				result += fu.value+"&nbsp;&nbsp;";
+			}
+			console.log(result);
+			document.querySelector("#result").innerHTML=result;
+		}
+	};
+</script>
+</head>
+<body>
+	전체선택
+	<input type="checkbox" name="allCheck" id="allCheck">
+	<br>
+	<hr>
+	사과
+	<input type="checkbox" name="fruits" class="fruits" value="사과">
+	<br> 수박
+	<input type="checkbox" name="fruits" class="fruits" value="수박">
+	<br> 바나나
+	<input type="checkbox" name="fruits" class="fruits" value="바나나">
+	<br> 오렌지
+	<input type="checkbox" name="fruits" class="fruits" value="오렌지">
+	<br>
+	<button id="test">확인</button>
+	<span id="result"> </span>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

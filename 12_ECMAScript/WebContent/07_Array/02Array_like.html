@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//1. 첫번째 인자는 array-like 객체 또는 iterable 객체 지정
+let arr = Array.from(`hello`);
+console.log(arr,arr[0]);
+
+//2. 두번째 인자는 배열생성하면서 수행되는 함수 지정
+let arr2 = Array.from("world", function(v){
+	
+	console.log(">>",v);
+});
+//world 단어 하나하나가 v로 넘어감
+
+//3. 세번째 인자는 함수내에서 this사용시 참조할 객체 지정
+//array from 배열을 새로운 데이터로 만들 수 있다.
+let arr3 = Array.from("happy", function (v) {
+	console.log("**",v);
+	return v+ this.mesg;
+},{mesg:"값"});
+console.log(arr3);
+console.log(Array.isArray(arr3)); //true
+
+//리턴하면서 3번째 인자로 넘겨준 파라미터를 꺼내옴
+//this를 붙여 새로운 값을 리턴
+//v에서 한번 직어봄. 
+//찍어본 v뒤에 mesg를 붙임
+
+var obj
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

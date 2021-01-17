@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//forEach의 사용
+var map = new Map();
+map.set("one",100);
+map.set(1,200);
+map.set(false, 200);
+var result = map.delete("one"); //true
+console.log(map.get("one")); //undefined
+console.log(result);
+console.log(map.delete("two")); //false
+</script>
+</head>
+<body>
+
+</body>
+</html>

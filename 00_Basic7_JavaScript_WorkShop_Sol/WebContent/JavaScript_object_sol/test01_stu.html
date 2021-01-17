@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function info() {
+		document.getElementById("bName").innerText = "NetSpace"
+		var n = document.getElementById("bVersion");
+		console.dir(n);
+		var s = n.value;
+		console.log(s);
+		document.getElementById("bOnLine").innerText = "true"
+	}
+	
+	function info(){
+		console.log(navigator);
+		document.getElementById("bName").innerText=navigator.appName;
+		document.getElementById("bVersion").innerText=navigator.appVersion;
+		document.getElementById("bOnLine").innerText=navigator.onLine;
+		document.querySelector("#bName").innerText="bName";
+		document.querySelector("#bVersion").value="bVersion";
+		document.querySelector("#bOnLine").innerText="bOnLine";
+	}
+</script>
+</head>
+<body>
+	<h3>사용중인 웹 브라우저 정보 보기</h3>
+	<button onclick="info()">보기</button>
+	<!-- onclick="info()" -->
+	<div>
+		브라우저 이름:<span id="bName"></span><br> 브라우저 버전:<input type="text"
+			name="bVersion" id="bVersion"><br> 브라우저 온라인 여부:<span
+			id="bOnLine"></span><br>
+	</div>
+</body>
+</html>

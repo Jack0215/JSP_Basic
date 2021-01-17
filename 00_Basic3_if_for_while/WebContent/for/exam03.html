@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function gugudan(){
+		for (var n = 2; n <= 9; n++) {
+			document.write("<div style='border: 1px solid black;'>");
+			document.write("<h1>"+n+"단</h1>");
+			for(var m = 2; m <= 9; m++){
+				//console.log("hello",n,m);
+				document.write(n +"x" +m+"="+ (n*m)+"<br>");
+			}
+			//document.write("<br>");
+			document.write("</div>");
+		}
+	}
+	gugudan();
+</script>
+</head>
+<body>
+	<p>hello</p>
+</body>
+</html>

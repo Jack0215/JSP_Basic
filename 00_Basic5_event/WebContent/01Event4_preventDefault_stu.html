@@ -1,0 +1,72 @@
+v<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function xxx() {
+	alert("submit");
+}
+function xxx2() {
+	var id = document.getElementById("userid").value; //사용자가 입력한 id값
+	var passwd = document.getElementById("passwd").value; //사용자가 입력한 passwd값
+	var result = false; //전송 여부 판단 할 변수
+	if(id.length>=3 && passwd.length !=0){
+		result = true; //result값이 xxx2()에 전달되어 target.html로 전송이 됨
+		
+	}else {
+		alert("에러"); //위 조건이 만족이 안 될 경우 result를 false 설정
+	}
+	return result; //result값이 xxx2()에 전달되어 target.html로 전송이안됨
+}
+function xxx3(e) {
+	/* alert("submit")	;
+	//e.preventDefault() //action금지 event.prevent()
+	event.preventDefault(); */
+	var id = document.getElementById("userid1").value; //사용자가 입력한 id값
+	var passwd = document.getElementById("passwd1").value; //사용자가 입력한 passwd값
+	var result = false; //전송 여부 판단 할 변수
+	if(id.length>=3 && passwd.length !=0){ //result값이 xxx2()에 전달되어 target.html로 전송이 됨
+		result=true;
+	}else {
+		alert("error");
+		e.preventDefault(); //위 조건이 만족이 안 될 경우 result를 false 설정
+	}
+}
+</script>
+</head>
+<body>
+<form action="target.html" onsubmit="xxx()">
+아이디<input type="text" name="userid"><br>
+비번<input type="text" name="passwd"><br>
+<input type="submit" value="로그인">
+<input type="reset" value="취소"><br>
+</form>
+<form action="target.html" onsubmit="return xxx2()"><!-- return은 xx2()에서 t or f 가져와서 리턴함, return앞에 적으면 return을 받아오는것-->
+아이디<input type="text" name="userid" id="userid"><br> <!-- name: 서버에서 사용하고 id: 스크립트에서 사용할거임 -->
+비번<input type="text" name="passwd" id="passwd"><br>
+<input type="submit" value="로그인"><br>
+</form>
+<!--    -->
+<form action="target.html" onsubmit="xxx3(event)"> <!-- submit했을때 xxx3()호출 -->
+아이디<input type="text" name="userid" id="userid1"><br>
+비번<input type="text" name="passwd" id="passwd1"><br>
+<input type="submit" value="로그인"><br>
+</form>
+<form action="target.html" id="test"><!-- 주의  -->
+아이디<input type="text" name="userid" ><br>
+비번<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인"><br>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

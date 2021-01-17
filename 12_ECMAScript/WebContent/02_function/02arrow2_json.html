@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//1. 함수 표현식 
+let a = () => {key:"홍길동"};
+console.log(a()); //undefined {} 실행 블럭으로 인식
+
+//2. 람다 표현식
+a=()=>({key:"홍길동"}); //({})블럭사용 json객체로 인식시킴
+console.log(a()); 
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

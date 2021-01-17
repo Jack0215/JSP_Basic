@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//location.href 사용, 
+	//텍스트상자에 적힌 값을 구현
+	function google() {
+		location.href = "http://www.google.com";
+	}
+	function site(){
+		location.href ="http://"+document.getElementById("site").value;
+	}
+	
+	function stie2(){
+		var url1 = document.querySelector("#site").value;
+		console.log("url1",url1);
+		location.href=url1;
+	}
+</script>
+</head>
+<body>
+	<h3>자바스크립트로 특정 URL 접속하기</h3>
+	<button onclick="google()">구글사이트로 가기</button>
+	<br> 사이트주소입력:
+	<input type="text" name="site" id="site">
+	<button onclick="site()">바로가기</button>
+</body>
+</html>

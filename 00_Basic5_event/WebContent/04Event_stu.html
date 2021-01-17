@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 	 window.onload=function(){
+	 document.getElementById("chk").addEventListener("click",check,false);
+	 document.getElementById("address2").addEventListener("keyup",function(e){ //keyup 이벤트 ,뒤에 function구현
+	 document.querySelector("#test").innerHTML=this.value; //여기서 this는 address2를 가리킴, 실행하면 address2에 입력한 값이 그 아래 바로 따라나옴
+	 },false); 
+	 }; 
+	function check() {
+		document.getElementById("address2").value = document
+				.getElementById("address").value;
+	}  */
+</script>
+</head>
+<body>
+	회원주소
+	<input type="text" name="address" id="address" value="공주~~~~">
+	<br> 배송지가 같으면 다음을 체크하세요
+	<input type="checkbox" name="chk" id="chk">
+	<br> 배송지 주소
+	<input type="text" name="address2" id="address2">
+	<br>
+	<span id="test"></span>
+	<script type="text/javascript">
+		document.getElementById("chk").addEventListener("click", check, false);
+		document.getElementById("address2").addEventListener("keyup",
+				function(e) { //keyup 이벤트 ,뒤에 function구현
+					document.querySelector("#test").innerHTML = this.value; //여기서 this는 address2를 가리킴, 실행하면 address2에 입력한 값이 그 아래 바로 따라나옴
+				}, false);
+		function check() {
+			document.getElementById("address2").value = document
+					.getElementById("address").value;
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

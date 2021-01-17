@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+  function chk(m){	  
+	  var mesg = document.getElementById("result");
+	  mesg.style="font-size:"+m;
+  }
+
+</script>
+</head>
+<body>
+ 글꼴크기:
+ <select onchange="chk(this.value)">
+  <option value="16px">16px</option>
+  <option value="32px">32px</option>
+  <option value="40px">40px</option>
+  <option value="56px"> 56px</option>
+ </select>
+ <div id="result">
+   안녕하세요.
+ </div>
+</body>
+</html>

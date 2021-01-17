@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var size=32;
+  function up(){
+	  size=size+4;
+	  var mesg = document.getElementById("result");
+	  mesg.style="font-size:"+size+"px";
+  }
+  function down(){
+	  size=size-4;
+	  var mesg = document.getElementById("result");
+	  mesg.style="font-size:"+size+"px";
+  }
+
+
+</script>
+</head>
+<body>
+ <button onClick="up()">+</button><button onClick="down()">-</button>
+ <div id="result">
+   안녕하세요.
+ </div>
+</body>
+</html>

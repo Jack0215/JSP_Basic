@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    window.onload=function(){
+    	var a = document.getElementById("a"); //a를 div에 클릭이벤트리스너를 달았음
+    	var b = document.getElementById("b");
+    	a.addEventListener("click",function(){
+    		console.log("a");
+    	},false); //false를 주면 부모(최종 body)까지 전달됨
+    	
+    	b.addEventListener("click",function(e){  //function에 e를 넣었음(event)
+    		console.log("b");
+    	e.stopPropagation(); //이벤트 전파 방지
+    	},false); 
+    };
+
+</script>
+</head>
+<body>
+<div id="a" style="background-color: #ff0000">
+   a
+    <div id="b" style="background-color: #00ff00">
+       b
+       
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

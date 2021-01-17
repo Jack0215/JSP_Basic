@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+	   함수 구현
+	 
+	 */
+	var arr; //arr이란 변수를 전역변수로 선언
+	function Arr() {
+		arr = [];  //값 넣을 때 마다 1개씩 배열로 생성됨 
+		console.log("create")
+	}
+	function delArr() {
+		arr = [];
+		show();
+	}
+	function saveArr() {
+		var v1 = document.getElementById("v1").value
+		arr.push(v1);
+	}
+	function show() {
+		var mesg = "";
+		for (var i = 0; i < arr.length; i++) {
+			mesg += arr[i] + "<br>";
+		}
+		document.getElementById("result").innerHTML = mesg;
+	}
+</script>
+</head>
+<body>
+	<h3>배열 관리</h3>
+	<button onclick="Arr()">배열생성</button>
+	<button onclick="delArr()">배열삭제</button>
+	<br> 값:
+	<input type="text" name="v1" id="v1">
+	<button onclick="saveArr()">배열에 값 저장</button>
+	<br>
+	<button onclick="show()">배열에 값 출력</button>
+	<br>
+	<div id="result"></div>
+</body>
+</html>

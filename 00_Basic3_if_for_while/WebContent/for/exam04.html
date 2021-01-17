@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    // break => 블럭{} 밖으로 , continue ==> 문장의 끝
+    
+    AAAA:
+    for (var n = 1; n <= 5; n++) {
+    	for (var n2 = 1; n2 <= 5; n2++) {
+    		if(n2==3) continue AAAA;
+    	}
+    	console.log("aaa");
+    }
+    
+    
+    // continue, break 는 가장 가까운 반복문과 관련있음
+    for (var n = 1; n <= 5; n++) {
+    	for (var n2 = 1; n2 <= 5; n2++) {
+    		if(n2==3)continue;
+    	}
+    	console.log("aaa");
+    }
+    
+    
+    
+    
+    for (var n = 1; n <= 5; n++) {
+		console.log("a");
+		if(n==3)continue;
+		console.log("b");
+		console.log("c");
+	}
+    
+    
+    
+	for (var n = 1; n <= 5; n++) {
+		if(n==3)break;
+		console.log("hello",n);
+	}
+
+</script>
+</head>
+<body>
+	<p>hello</p>
+</body>
+</html>

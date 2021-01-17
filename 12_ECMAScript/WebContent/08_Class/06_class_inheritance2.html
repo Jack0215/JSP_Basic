@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//상속==>
+class Employee{ //생성자 작성, name, salary
+	constructor(name, sal)
+	{
+		console.log("부모생성자")
+		this.name=name;
+		this.salary=sal;
+	}
+	setName(name){
+		this.name = name;
+	}
+	setSalary(salary){
+		this.salary = sal;
+	}
+	getName(){
+		return this.name;
+	}
+	getSalary(){
+		return this.salary;
+	}
+}//end Employee  
+
+//상속
+class Manager extends Employee{//생성자 작성, name, salary, depart
+	constructor(name, sal, depart)
+	{
+		super(name,sal);//super를 통해 부모 생성자 호출, 
+						//막으면 부모가 객체생성을 못해서 에러가 발생
+		console.log("자식 생성자 ==");
+		this.depart=depart;
+	} 
+	setDepart(depart){
+		this.depart = depart;
+	}
+	getDepart(){
+		return this.depart;
+	}
+	//super();	   //부모 생성자 명시적 호출 필수, 호출먼저 시작되어야함. 밑에있으면 에러 발생
+} //부모 생성자 만들어 진 후 자식 생성자가 만들어진다.
+
+//사용하려면 객체 생성 후 사용
+var man = new Manager("홍길동",1000,"인사"); //부모, 부모, 자식
+					//여기 manager는 30라인 호출
+console.log(man.getName());
+console.log(man.getSalary());
+console.log(man.getDepart());
+</script>
+</head>
+<body>
+
+</body>
+</html>

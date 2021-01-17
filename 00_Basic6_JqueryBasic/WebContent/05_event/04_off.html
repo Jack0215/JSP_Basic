@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#on").on("click",function(){
+			console.log("출력");
+			
+		})
+		$("#off").on("click",function(){
+			$("#on").off("click");
+		});
+	});
+</script>
+</head>
+<body>
+
+	<button id="on">on</button>
+	<button id="off">off</button>
+</body>
+</html>

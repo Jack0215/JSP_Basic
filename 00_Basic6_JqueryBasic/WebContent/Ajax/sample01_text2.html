@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("button").on("click", setData); //getData 함수 불러옴
+	});
+	function setData(){
+		$.ajax({
+			type:"get", //전송타입(사용자가 서버로 요청하는 타입, post써도 되나 설정할게 많아지므로 get씀)
+			url:"sample01_text2.jsp", //서버 요청 대상 파일
+			data:{
+				V1:$("#v1").val(), //data전송 ket=v1 : value=사용자입력값
+				V2:$("#v2").val()
+			},
+			dataType: "text", //서버 -사용자 응답 타입
+			success:function(data, status, xhr){  //성공할 경우 function(데이터, 상태값, xhr)이 순서를 꼭 지켜야함
+				$("#result").text(data); //result에 찍어줌
+			},
+			error: function (xhr, status, error){ //요청-응답이 실패한 경우 -xhr, 상태값, error 순서를 지켜야함
+				$("#result").append("error",error); //에러메세지
+				$("#result").append("status",status); //상태값 출력
+			}
+		});
+	}
+</script>
+</head>
+<body>
+	<button id="a">Ajax요청</button><br>
+	V1:<input type="text" name="v1" id="V1"><br>
+	V2:<input type="text" name="v2" id="V2"><br>
+	<div id="result"></div>
+</body>
+</html>

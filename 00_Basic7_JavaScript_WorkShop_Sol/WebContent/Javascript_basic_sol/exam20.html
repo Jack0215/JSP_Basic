@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	for(var n=10; n<=20; n++){
+		console.log("haappy"+n+"<br>");
+		document.write("haappy"+n+"<br>");
+	}
+	for(var n=10; n>0; n--){
+		console.log("apple"+n+"<br>");
+		document.write("apple"+n+"<br>");
+	}
+	for(var n=0; n<10; n+=2){
+		console.log("banana"+n+"<br>");
+		document.write("banana"+n+"<br>"); 
+	}
+	
+	var sum = 0;
+	for(var i=0; i<=100; i++){
+		
+		sum += i;
+		
+	}
+	console.log(sum);
+	document.write(sum,"<br>");
+	
+	/* for(var n=1, m=1; n<=10 && m<4; n++,m++){
+		console.log("hello",n,m);
+	} */
+	
+	for(var i=2; i<10; i++){
+		document.write("<div style='border: 1px solid black; display:inline-block '>");
+		document.write("<h1>"+i+"단</h1>");
+		
+		for(var m=1; m<10; m++){
+			console.log(i+"*"+m+"="+i*m );
+			document.write(i+"*"+m+"="+i*m,"<br>");
+		}
+		document.write("</div>");
+	}
+	
+</script>
+</head>
+<body>
+	<p>hello</p>
+</body>
+</html>

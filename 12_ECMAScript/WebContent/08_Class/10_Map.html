@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//1. 객체생성
+var map = new Map();
+
+//2. 정보보기
+console.log(map);
+
+//3. 데이터 저장 .set()
+map.set("one", 100);
+map.set(1,200);
+map.set(false,300);
+
+//4.데이터 출력 .get()
+//뽑을 때 key 값 그대로 사용, java는 String인데 얜 그게 아님 이게 좀 차이점이다.
+console.log(map.get("one"));
+console.log(map.get(1));
+console.log(map.get(false));
+
+//똑같은 키값, 다른데이터 = 데이터 덮어씀
+map.set("one",200);
+console.log(map.get("one")); //200출력
+
+//5. has 메소드
+console.log(map.has("two"));//false...왜 false지? 없어서 false다.
+		
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

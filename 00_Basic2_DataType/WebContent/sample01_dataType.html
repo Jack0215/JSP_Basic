@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dataType</title>
+<script type="text/javascript">
+
+     //변수 선언
+     var name = "홍길동";
+     var age = 20;
+     var array = [1,2,3,4]; //배열의 JSON
+     var obj = { "username":"이순신","age": 44};//객체의 JSON
+     var result = true; //boolean
+     var xxx;    // undefined
+     var kkk = null;  // null 
+     var zzz = function (){}; // 함수 객체
+     // NaN ( Not a Number)
+     var xyz = parseInt("123");
+     console.log(xyz+10);
+     var xyz2 = parseInt("helo");
+     console.log(xyz2); // NaN
+     name = 200;
+     console.log(name);
+     console.log(age);
+     console.log(array);
+     console.log(obj);
+     console.log("obj.username",obj.username, "obj.age", obj.age);
+     console.log("obj['username']", obj['username']);
+     console.log(result);
+     console.log(xxx);
+     console.log(kkk);
+     console.log("function",zzz);
+     
+   //객체에 없는 프로퍼티 접근은 undefined
+ 	var foo = {
+ 			"name":'sss',
+ 			"age":20
+ 	}
+ 	console.log(foo.name +"\t"+ foo["name"]);
+ 	console.log(foo.age +"\t"+ foo["age"]);
+ 	console.log(foo.addresss);  //undefined
+
+</script>
+</head>
+
+
+
+
+<body>
+
+</body>
+</html>

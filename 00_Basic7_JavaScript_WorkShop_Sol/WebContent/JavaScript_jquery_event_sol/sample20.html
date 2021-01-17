@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+ 
+  function sum(){
+	  var v1 = document.getElementById("v1").value;
+	  var v2 = document.getElementById("v2").value;
+	  var result = document.getElementById("result");
+	  result.value = parseInt(v1)+parseInt(v2);
+  }
+  
+   function total(){
+	   var price = document.getElementById("price").value;
+	   var quantity = document.getElementById("quantity").value;
+	   var total = document.getElementById("total");
+	   total.innerText=parseInt(price) * parseInt(quantity);
+   }
+   
+   
+   function totalPrice(){
+	   var fruit = document.querySelectorAll(".fruit");  
+	   var total=0;
+	   for(var i=0 ;i < fruit.length;i++){
+		   if(fruit[i].checked){
+			   total += parseInt(fruit[i].value);
+		   }
+	   }
+	   var totalPrice = document.getElementById("totalPrice");
+	   totalPrice.innerText = total;
+   }
+   
+</script>
+</head>
+<body>
+<h3>1. + 연산</h3>
+<input type="text" name="v1" id="v1" value="10">+
+<input type="text" name="v2" id="v2" value="20">=
+<input type="text" name="result" id="result" value=""><button onclick="sum()">연산</button><br>
+<h3>2. 총합 구하기</h3>
+가격<input type="text" name="price" id="price" value="2500"> X
+수량<select id="quantity" onchange="total()">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+   </select>
+총합:<span id="total"></span>
+<h3>3. 총합 구하기2 ( 선택된 값만 )</h3>
+<div>
+바나나(1000원)<input type="checkbox" name="fruit" class="fruit" value="1000"><br>
+사과(500원)<input type="checkbox" name="fruit" class="fruit" value="500"><br>
+배(1500원)<input type="checkbox" name="fruit" class="fruit" value="1500">
+<button onclick="totalPrice()">총합구하기</button><br>
+선택한 총가격:<span id="totalPrice"></span>
+</div>
+</body>
+</html>

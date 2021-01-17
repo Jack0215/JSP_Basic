@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dto">
+
+	<select id="selectAll" resultType="MyProductDTO">
+		select prodId, prodName, price , quantity
+		from myproduct
+		order by prodId asc
+	</select>
+
+	<delete id="deleteByProdId" parameterType="String">
+		delete from myproduct
+		where prodID=#{prodID}
+	</delete>
+
+	<!-- arraylist -->
+	<delete id="deleteByAllProdId" parameterType="arraylist">
+		delete from myproduct
+
+		<where>	  	<!-- 리스트는 arraylist를 가리킴 . item은 방에있는 값을 가리킴 첫번째 방에 있는거 꺼내서 xx에 저장 두번째 ~~ 
+				저장 -->
+			<foreach collection="list" item="xx" index="index">
+				or prodId =#{xx}								<!-- index = (int i =0) -->
+		<!-- or prodId=#{xx}가 계속 반복돼서 prodId =#{1번방자료} or prodId =#{2번방자료} 순으로 
+					반복된다. -->
+			</foreach>
+		</where>
+	</delete>
+</mapper>

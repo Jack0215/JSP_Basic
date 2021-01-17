@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자식/자손</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$("label+input").css("color","blue").val("Labeled!"); //.val
+														  //js의 value와 같음
+
+	});
+	
+</script>
+</head>
+<body>
+	<form>
+		
+		<label for="name">Name:</label> 
+		<input name="name" id="name" />
+
+		<fieldset>
+			<label for="newsletter">Newsletter:</label> 
+			<input name="newsletter" id="newsletter"> 
+		</fieldset>
+	</form>
+	<input name="none">
+</body>
+</html>
+
+

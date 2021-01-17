@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function* a() {
+	var bbb = yield 'A';
+	var aaa = yield 'B';
+	console.log(aaa,bbb);
+}
+var x = a();
+console.log(x.next()); //{ value='A' done:false}
+console.log(x.next(3000)); //bbb에 2000 저장하고  { value='B' done:false}
+console.log(x.next(2000)); //aaa에32000 저장하고  console 출력 2000,3000 출력하고
+						   //{ value= undefined done:true}
+</script>
+</head>
+<body>
+
+</body>
+</html>

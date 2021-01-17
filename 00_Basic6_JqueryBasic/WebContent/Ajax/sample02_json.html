@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#a").on("click", getData); //getData 함수 불러옴
+	});
+	function getData(){
+		$.ajax({
+			type:"get",
+			url :"sample02_json.jsp",
+			dataType:"json",
+			success: function(data, url, xhr){
+				var username = data.username;
+				var age = data.age;
+				//dataType="text" 시에 text를 object로 변환사용
+				/* var jsondata=JSON.parse(data);
+				var username = jsondata.username;
+				var age = jsondata.age; */
+				console.log(username,age);
+				$("#result").text(username+":"+age);
+			},
+		error:function(xhr,status, error){
+			$("#result").text(error);
+		}
+				
+		});
+	}
+</script>
+</head>
+<body>
+	<button id="a">Ajax요청</button><br>
+	<div id="result"></div>
+</body>
+</html>

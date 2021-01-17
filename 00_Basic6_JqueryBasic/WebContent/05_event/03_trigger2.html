@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("button").on("click",function(){
+			$("[name=message]").trigger("myCustom"); //여기서 myCustom은 사용자 정의 이벤트다(실제론 없다.)
+		});
+		$("[name=message]").on("myCustom",function(){
+			$(this).val("메세지를 입력하세요");
+		});
+		$("[name=message]").on("focus",function(){
+			$(this).val("");
+		});
+	});
+</script>
+</head>
+<body>
+<input type="text" name="message" id="message">
+	<button>Press</button>
+</body>
+</html>

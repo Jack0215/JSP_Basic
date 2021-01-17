@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("select").change(function(){
+			$("div").text($("option:selected").val());
+		})
+	})
+</script>
+</head>
+<body>
+	<select name="sweets">
+	<option value="초콜릿">초콜릿</option>
+	<option value="캔디">캔디</option>
+	<option selected="selected" value="사탕">사탕</option>
+	<option value="아이스크림">아이스크림</option>
+	<option value="쿠키">쿠키</option>
+	</select>
+	<div></div>
+</body>
+</html>

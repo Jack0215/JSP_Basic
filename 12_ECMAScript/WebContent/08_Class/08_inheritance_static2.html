@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+class Employee{
+	getEmployee(){
+		return "hello";
+	}
+	static getXXX(){
+		return "world";
+	}
+}
+console.log(Employee.getXXX());
+//static 함수를 바로 호출해버림
+//함수를 생성하지 않아도 출력가능
+let emp = new Employee();
+
+console.log(Employee.getXXX(), emp.getEmployee());
+//getEmployee static이 아니라서 17Line에서 함수 생성한다음 사용함
+</script>
+</head>
+<body>
+
+</body>
+</html>

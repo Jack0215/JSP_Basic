@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//json객체
+var k = "name";
+var n = {"name":"홍길동","age":20};
+console.log(n.name, n["name"], n[k]); //연관배열중요
+
+//1.키 값을 변수로 지정하여 사용하기
+var x = "username";
+var x2 = "userage";
+var obj={x:"이순신", x2:20};
+console.log(obj);
+
+var obj2={[x]:"이순신",[x2]:20}; //변수로 키값 지정
+								//[변수명]:value
+console.log("=",obj2);
+								
+//2. 응용
+var obj={sport1:"축구", sport2:"야구", sport3:"농구"};
+console.log(obj);
+var s = "sport";
+var obj2 = {[s+'1']:"축구",[s+'2']:"야구", [s+'3']:"농구"};
+console.log(obj2);
+
+//3. 키값을 연결
+var obj3 = {["one"+"two"]:100}
+console.log(obj3); //key값은 onetwo
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

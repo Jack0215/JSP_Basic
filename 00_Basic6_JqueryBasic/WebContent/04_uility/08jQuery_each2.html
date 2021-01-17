@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var sum = 0;
+		$("li").each(function(idx, data) {
+			var v = parseInt($(this).text());
+			console.log(v);
+			sum += v;
+
+		});
+		$("#result").text(sum); //result에다가 값을 출력하게 함
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li>100</li>
+		<li>200</li>
+		<li>300</li>
+		<li>400</li>
+	</ul>
+	합계:
+	<div id="result"></div>
+</body>
+</html>

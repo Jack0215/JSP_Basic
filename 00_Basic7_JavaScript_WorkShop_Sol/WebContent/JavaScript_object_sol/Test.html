@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function test() {
+		var byTagName= document.getElementsByTagName("input");
+		console.log(byTagName);
+		console.log(byTagName[0].value);
+		var querySelect= document.querySelector("input");
+		console.log("querySelect>>>>",querySelect);
+		//console.log("querySelect>>>>",querySelect[0].value);
+		var byClassName= document.getElementsByClassName("test");
+		console.log("byClassName>>>", byClassName);
+		console.log("byClassName>>>",byClassName[0].value);
+		var querySelectall= document.querySelectorAll(".test");
+		console.log("querySelectAll>>>>", querySelectall);
+		console.log("querySelectAll>>>>", querySelectall[0].value);
+		var querySelectallinput= document.querySelectorAll("input");
+		console.log("querySelectallinput >>>", querySelectallinput);
+		console.log("querySelectallinput >>>", querySelectallinput[0].value);	
+	}
+
+</script>
+</head>
+<body>
+<input type="text" id="aa"    class=""  value="a"/>
+<input type="text" id="bb"    class=""  value="a"/>
+<input type="text" id="cc"    class=""  value="a"/>
+<input type="text" id="dd"    class="test"  value="aa"/>
+<input type="text" id="ee"    class="test"  value="bb"/>
+<input type="text" id="ff"    class="test"  value="cc"/>
+<input type="text" id="gg"    class="test"  value="dd"/>
+
+<a href="javascript:test()">확인하기 </a>
+</body>
+</html>

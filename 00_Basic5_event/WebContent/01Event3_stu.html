@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//window.onlead(화면이 다 불러와진 다음 실행)
+	window.onload = function() {
+		var imgs = document.getElementsByTagName("img");
+		console.log(imgs);
+		for( var i = 0; i< imgs.length-1; i++){
+			var img = imgs[i];
+			 img.onmouseover = function(){
+				 imgs[3].src=this.src;  //this.getAttribute("src");
+					console.log(imgs[3].src=this.src);
+				} 
+		}
+
+	}
+</script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td><img src="../image/a.jpg" width="100" height="100"></td>
+			<td><img src="../image/b.jpg" width="100" height="100"></td>
+			<td><img src="../image/c.jpg" width="100" height="100"></td>
+		</tr>
+		<tr>
+			<td colspan="3"><img src="../image/a.jpg" width="300"
+				height="300"></td>
+			<!-- 화면에 크게 보여 질 부분 -->
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

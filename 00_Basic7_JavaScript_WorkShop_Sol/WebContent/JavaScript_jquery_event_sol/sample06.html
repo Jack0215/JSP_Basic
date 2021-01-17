@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+     function chk(n){
+    	 document.getElementById("my").src="../image/"+n;
+     }
+
+</script>
+</head>
+<body>
+이미지선택하기<br>
+<select onchange="chk(this.value)">
+ <option value="a.png">a.jpg</option>
+ <option value="b.png">b.jpg</option>
+ <option value="c.png">c.jpg</option>
+</select>
+<img src="a.jpg" width="100" height="100" id="my">
+
+</body>
+</html>

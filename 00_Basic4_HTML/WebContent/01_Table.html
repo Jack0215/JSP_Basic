@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지원서 작성</title>
+<style type="text/css">
+ span{
+   color:blue;
+   font-size:20px;
+ }
+</style>
+</head>
+<body>
+	<b>지원서 작성</b>
+	<hr />
+<form action="target.html" method="get" name="test">
+	<span>기본지원사항</span>
+		<table border="1">
+			<tr>
+				<th>응시분야</th>
+				<td><select name="part">
+						<option >Consulting</option>
+						<option selected="selected">IoT</option>
+						<option>빅데이터</option>
+						<option>R&D</option>
+				</select> 
+				<select name="exprience">
+						<option>Staff</option>
+						<option selected="selected">신입</option>
+						<option>경력</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>졸업여부</th>
+				<td><input type="radio" name="graduate" >졸업</input>
+					<input type="radio" name="graduate" checked="checked">졸업예정</input></td>
+			</tr>
+		</table>
+		<span>기본인적사항</span>
+		<table border="1">
+			<tr>
+				<th>성명</th>
+				<td><input name="fullname" type="text"></input></td>
+				<th>국적<input name="nation" type="text"></input></th>
+			</tr>
+			<tr>
+				<th>영문이름</th>
+				<td>성<input name="engfirstname" type="text"/></td>
+				
+				<td>이름<input name="englastname" type="text"></input></td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td colspan="2"><input name="email_1" type="text"></input>@<input name="email_2"type="text"></input></td>
+			</tr>
+			<tr>
+				<th>휴대전화</th>
+				<td colspan="2"><input name="phone" type="text" size="3"></input> - <input
+					type="text" size="4"></input> - <input type="text" size="4"></input>
+				</td>
+			</tr>
+		</table>
+		<span>어학사항</span>
+		<table border="1">
+			<tr>
+				<th>어학구분</th>
+				<td><select name="language" >
+						<option>영어</option>
+						<option>중국어</option>
+						<option selected="selected">불어</option>
+						<option>일본어</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>어학시험명</th>
+				<td><input type="text" name="testName"></input></td>
+			</tr>
+			<tr>
+				<th>점수/등급</th>
+				<td><input type="text" name="score" ></input>/<input name="grade" type="text"></input></td>
+			</tr>
+		</table>
+		<br>
+		 <input type="submit" value="지원하기"></input> 
+		  <button type="reset">다시작성하기</button>
+	</form>
+</body>
+</html>

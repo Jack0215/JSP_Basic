@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+class Person{
+	//new.target 속성, new.target.name 속성
+	//new.target은 constructor를 참조함
+	//new.targetn.name은 클래스의 이름
+	
+constructor(name, age)
+{
+	console.log("14 Line",new.target);
+	console.log("=========");
+	console.log("16 Line",new.target.name);
+}
+set setName(name){
+	this.name = name;
+}
+get getName(){
+	return this.name;
+}
+set setAge(age){
+	this.age = age;
+}
+get getAge(){
+	return this.age;
+}
+
+}
+var p1 = new Person("홍길동",44);
+console.log(p1.getName);
+console.log(p1.getAge);
+
+var p2 = new  Person(); //두번째 객체 생성, 12라인부터 반복
+console.log(p2.getName);
+</script>
+</head>
+<body>
+
+</body>
+</html>

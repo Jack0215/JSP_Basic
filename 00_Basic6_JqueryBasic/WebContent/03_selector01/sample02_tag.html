@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전체태그 : *</title>
+<script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	$("p").css("color","red");
+	var x = $("p"); //p태그를 var x에 저장
+	console.log(x);
+	console.log(x[0],x[1],x.length);
+	console.log(x[0].innerText, x[1].innerText); // 태그와 태그 사이에 글자를 가져오는 innerText, innerHTML
+												 // <input type=text value="aaa">의 값을 가져오려면 .value를 가져왔음 
+	console.log("첫번째div값",$("div")[0].innerText);
+	console.log("두번째div값",$("div")[1].innerText);
+	$("div")[1].innerText="test";
+	console.log($("div")[0]);
+	$(x[1]).css("color","blue");
+});
+
+</script>
+</head>
+<body>
+<p>Hello</p>
+<p>Hello2</p>
+<div>World</div>  <!-- 0번 -->
+<div>world2</div> <!-- 1번 -->
+</body>
+</html>
+

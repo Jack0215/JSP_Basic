@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var num=10; //전역변수 ()로 두면, 전체(스크립트)에서 사용 가능함, 공유변수(전역변수)가 됨, 클래스의 멤버변수와 같은 개념임
+	function outputNumbers(count) {
+		for(var i = 0; i< count; i++){
+			console.log(i);
+		}
+		console.log(">>"+i); //5
+		console.log(num);
+	}
+	outputNumbers(5); 
+	console.log(num);
+	/* 자바나 c++ 같은 언어에서는 변가 i가 for 루프 블록 내부에 존재하므로 루프가 실행을 마치면 변수는 곧 ~~하지만 자바스크립트에서는 변수 i가 outputNumbers()의
+	활성화 객체 일부인 것으로 정의되므로 그 시점부터는 함수 내에서 접근할 수 있습니다.
+	 */
+</script>
+</head>
+<body>
+	<p>hello</p>
+</body>
+</html>

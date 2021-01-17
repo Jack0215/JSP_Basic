@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var person={
+		name:"홍길동",
+		age:20,
+		getName: function(){ // 함수이름:function(){....}
+			return this.name;
+		},
+		setName: function(n){ //set변수명 뒤에 function을 줘야한다.
+			this.name=n;
+		},
+		getAge: function(){
+			return this.age;
+		},
+		setAge: function(a){
+			this.age=a;
+		}
+} //end of json
+
+console.log(person.name, person.age);
+person.setName("이순신");
+person.setAge(44);
+console.log(person.name, person.age);
+console.log(person.getName(), person.getAge());
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

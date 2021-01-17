@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성 선택자 실습</title>
+<style type="text/css">
+  div[id][class$='man']{ /*div 태그중 id 포함, class가 man으로 끝나는 부분을 선택 */
+    color:red;
+  }
+</style>
+</head>
+<body>
+    <div id="one">man-news</div>
+    <div class="milk man">milk man</div>
+    <div class="letterman2">letterman2</div>
+    <div class="newmilk">newmilk</div>
+    <div id="two" class="superman">superman</div>
+</body>
+</html>
+

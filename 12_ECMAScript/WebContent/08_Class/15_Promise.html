@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//Promise 객체 특정작업을 비동기처리 해 주는 객체
+//코드가 끝까지 수행하고 나서 resolve( )=> then의 첫 번째 함수 수행
+//코드가 끝까지 수행하고 나서 reject( )=> then의 두 번째 함수 수행
+function xxx(){
+	return new Promise(function(resolve, reject){
+		console.log("1");
+		//resolve(); //"1", "2", "end", "success" 비동기 처리
+		reject(); //"1", "2", "end", "fail" 비동기 처리
+		console.log("2");
+	}); 
+}
+xxx().then(function(){
+	console.log("success"); //2. Promise에 resolve가 활성화 되어있으면 첫 번 째 함수를 수행한다.
+}, function(){
+	console.log("fail"); //2-1. Promise에 reject가 활성화 되어있으면 두 번 쨰 함수를 수행한다.
+});
+console.log("end"); 
+// 1. end까지 실행 한 후에 promise로 올라가서 resolve와 reject가 있는지 확인한다.
+					
+</script>
+</head>
+<body>
+
+</body>
+</html>

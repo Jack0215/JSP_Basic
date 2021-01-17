@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var arr = Array.from("hello");
+console.log(arr, arr[0]);
+var arr =  Array.from("hello", function (v, idx) {
+	console.log(">>>>",v,idx);
+	return v+ "!!!";
+});
+console.log(arr);
+ 
+var obj = {aaa:100};
+//from에서 3번째 인자로 지정된 객체를 참조함. this 사용시
+var arr =  Array.from("hello", function (v, idx) {
+	console.log(">>>", v, idx, this.aaa);
+	return v+"!!!";
+}, obj);
+console.log(arr);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

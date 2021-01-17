@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a1 = parseInt(prompt("첫번째 숫자를 입력하세요", "0"));
+	var a2 = parseInt(prompt("두번째 숫자를 입력하세요", "0"));
+
+	var sum = 0;
+
+	function cal() {
+		for (i = a1; i <= a2; i++) {
+			sum = sum + i;
+		}
+		return sum;
+	}
+	cal();
+	document.write(a1 + "부터 " + a2 + "까지의 합은 " + sum);
+</script>
+</head>
+<body>
+
+
+</body>
+</html>
